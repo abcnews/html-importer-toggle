@@ -1,6 +1,6 @@
 {
   "name": "htmlimportertoggle",
-  "version": "1.0.0-pre",
+  "version": "1.0.1",
   "description": "A project generated from aunty's svelte project template.",
   "license": "MIT",
   "private": true,

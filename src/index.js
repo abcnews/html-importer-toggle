@@ -10,6 +10,7 @@ whenOdysseyLoaded.then(() => {
   [appMountEl] = selectMounts('htmlimportertoggle');
 
   if (appMountEl) {
+    appMountEl.classList.add('u-full');
     appProps = acto(getMountValue(appMountEl));
 
     if (appProps.foldername && appProps.htmlname) {
