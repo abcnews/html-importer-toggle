@@ -38,13 +38,6 @@
         el.style.display = 'none';
       }
     });
-    try {
-      if (window.parent && window.parent.$) {
-        window.parent.$('body').trigger('resizedcontent', [window]);
-      }
-    } catch (e) {
-      console.log(e);
-    }
   }
 
   onMount(() => {
