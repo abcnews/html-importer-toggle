@@ -12,8 +12,6 @@ whenOdysseyLoaded.then(() => {
   if (appMountEl) {
     appProps = acto(getMountValue(appMountEl));
 
-    console.log(appProps);
-
     if (appProps.foldername && appProps.htmlname) {
       new App({
         target: appMountEl,
