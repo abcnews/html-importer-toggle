@@ -9,12 +9,21 @@
   $: {
     if (parentEl) {
       const bImages = parentEl.querySelectorAll('.b-image');
+      const aEls = parentEl.querySelectorAll('.a-image');
 
       bImages.forEach(img => {
         if (showB) {
           img.style.display = 'block';
         } else {
           img.style.display = 'none';
+        }
+      });
+
+      aEls.forEach(el => {
+        if (showB) {
+          el.style.display = 'none';
+        } else {
+          el.style.display = 'block';
         }
       });
     }

@@ -4,7 +4,7 @@ import { getMountValue, selectMounts } from '@abcnews/mount-utils';
 import App from './components/App.svelte';
 
 whenOdysseyLoaded.then(() => {
-  const mounts = selectMounts('htmlimportertoggle');
+  const mounts = selectMounts('togglehtmlimporter');
 
   mounts.forEach(mount => {
     mount.classList.add('u-full');
