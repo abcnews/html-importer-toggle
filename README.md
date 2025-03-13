@@ -77,5 +77,4 @@ Manually edit the alt text for the images in the html
 
 # TODO
 
-- Allow for multiple imports
 - It may be possible to set the data attributes (etc.) via the ai2html illustrator script

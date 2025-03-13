@@ -39,6 +39,18 @@
   });
 </script>
 
+<svelte:head>
+  {#if window.__IS_ODYSSEY_FORMAT__}
+    <style>
+      /* styles required to make position sticky work */
+      /* existing styles on an Odyssey body are preventing position sticky from 'sticking' */
+      body {
+        overflow: visible;
+      }
+    </style>
+  {/if}
+</svelte:head>
+
 {#if htmlText}
   <div class="app">
     <div class="sticky">

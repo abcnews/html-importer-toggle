@@ -3,27 +3,24 @@ import { whenOdysseyLoaded } from '@abcnews/env-utils';
 import { getMountValue, selectMounts } from '@abcnews/mount-utils';
 import App from './components/App.svelte';
 
-let appMountEl;
-let appProps;
-
 whenOdysseyLoaded.then(() => {
-  [appMountEl] = selectMounts('htmlimportertoggle');
+  const mounts = selectMounts('htmlimportertoggle');
 
-  if (appMountEl) {
-    appMountEl.classList.add('u-full');
-    appProps = acto(getMountValue(appMountEl));
+  mounts.forEach(mount => {
+    mount.classList.add('u-full');
+    const mountProps = acto(getMountValue(mount));
 
-    if (appProps.foldername && appProps.htmlname) {
+    if (mountProps.foldername && mountProps.htmlname) {
       new App({
-        target: appMountEl,
+        target: mount,
         props: {
-          ...appProps
+          ...mountProps
         }
       });
     } else {
       console.error('Missing foldername or htmlname');
     }
-  }
+  });
 });
 
 if (process.env.NODE_ENV === 'development') {
