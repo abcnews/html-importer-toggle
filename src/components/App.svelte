@@ -31,8 +31,6 @@
     const ai2html = dummyEl.querySelector('.ai2html');
     const dataset = ai2html.dataset;
 
-    console.log(Boolean(dataset.startB));
-
     showB = Boolean(dataset.startB);
     if (dataset.aLabel) aLabel = dataset.aLabel;
     if (dataset.bLabel) bLabel = dataset.bLabel;
