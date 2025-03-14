@@ -15,7 +15,7 @@
     type="button"
     role="tab"
     data-orientation="horizontal"
-    data-state={!showB ? 'active' : 'inactive'}
+    data-state={!showB ? 'inactive' : 'active'}
     aria-selected={!showB}
     on:click={() => (showB = !showB)}
   >
@@ -25,7 +25,7 @@
     type="button"
     role="tab"
     data-orientation="horizontal"
-    data-state={showB ? 'active' : 'inactive'}
+    data-state={showB ? 'inactive' : 'active'}
     aria-selected={showB}
     on:click={() => (showB = !showB)}
   >
