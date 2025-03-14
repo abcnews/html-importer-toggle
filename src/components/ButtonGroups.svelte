@@ -21,7 +21,6 @@
   >
     {aLabel}
   </button>
-  <div class="line" />
   <button
     type="button"
     role="tab"
@@ -38,32 +37,33 @@
   .group {
     display: flex;
     background: #fff;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
     overflow: hidden;
     font-family: ABCSans;
-    min-height: 30px;
-    align-items: center;
+    border-radius: 9999px;
+    height: 50px;
+    padding: 4px;
   }
 
   button {
     border: none;
     background: none;
     font-family: inherit;
-    font-size: 18px;
-    color: rgba(17, 17, 17, 0.5);
-    font-weight: 400;
-    padding: 0 10px;
     cursor: pointer;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    outline: none;
+    color: white;
+    background-color: #3d392f;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 700;
 
     &[data-state='active'] {
-      color: #111;
-      font-weight: 700;
+      color: black;
+      background-color: unset;
     }
-  }
-
-  .line {
-    border-left: 1px solid black;
-    height: 16px;
   }
 </style>

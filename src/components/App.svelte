@@ -53,24 +53,43 @@
 
 {#if htmlText}
   <div class="app">
-    <div class="sticky">
-      <ButtonGroups {aLabel} {bLabel} bind:showB />
+    <div class="sticky-gutter">
+      <div class="sticky">
+        <div class="wrapper">
+          <ButtonGroups {aLabel} {bLabel} bind:showB />
+        </div>
+      </div>
     </div>
     <Html {htmlText} {showB} />
   </div>
 {/if}
 
 <style lang="scss">
+  .sticky-gutter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .app {
     position: relative;
   }
 
   .sticky {
     position: sticky;
-    top: 20px;
+    top: 0;
     z-index: 1;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
   }
 </style>
